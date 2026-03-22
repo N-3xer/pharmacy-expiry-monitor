@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PharmWatch Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="brand">
+      <span class="brand-icon">⊕</span>
+      <div>
+        <div class="brand-name">PharmWatch</div>
+        <div class="brand-sub">Expiry & Demand Intelligence</div>
+      </div>
+    </div>
+    <div class="header-right">
+      <span class="clock" id="clock">--:--:-- UTC</span>
+      <span class="status-dot" id="status-dot"></span>
+      <span class="status-label" id="status-label">Connecting...</span>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- ── Upload bar ── -->
+  <section class="controls-bar">
+    <div class="controls-left">
+      <label class="upload-label" for="inv-upload">
+        <span class="btn-icon">↑</span> Upload inventory
+        <input type="file" id="inv-upload" accept=".csv" hidden>
+      </label>
+      <label class="upload-label" for="disp-upload">
+        <span class="btn-icon">↑</span> Upload dispensing records
+        <input type="file" id="disp-upload" accept=".csv" hidden>
+      </label>
+      <button class="btn-run" onclick="runChecks()">
+        <span class="btn-icon">▶</span> Run checks
+      </button>
+    </div>
+    <div id="pipeline-msg" class="pipeline-msg"></div>
+  </section>
+
+  <!-- ── Summary cards ── -->
+  <section class="section">
+    <h2 class="section-title">Inventory overview</h2>
+    <div class="summary-grid" id="summary-grid">
+      <div class="loading-placeholder">Upload inventory to see overview</div>
+    </div>
+  </section>
+
+  <!-- ── Active flags ── -->
+  <section class="section">
+    <h2 class="section-title">Active flags <span id="flag-count" class="count-badge"></span></h2>
+    <div class="table-wrap">
+      <table id="flags-table">
+        <thead>
+          <tr>
+            <th>Drug</th>
+            <th>Batch</th>
+            <th>Type</th>
+            <th>Days to expiry</th>
+            <th>Qty</th>
+            <th>Value (Ksh)</th>
+            <th>Message</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="flags-body">
+          <tr><td colspan="8" class="empty-row">No active flags</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ── Demand forecast ── -->
+  <section class="section">
+    <h2 class="section-title">Demand forecast (next 90 days)</h2>
+    <div class="table-wrap">
+      <table id="forecast-table">
+        <thead>
+          <tr>
+            <th>Drug</th>
+            <th>Forecast units</th>
+            <th>Avg daily</th>
+            <th>Peak demand day</th>
+            <th>History used</th>
+            <th>Reliability</th>
+          </tr>
+        </thead>
+        <tbody id="forecast-body">
+          <tr><td colspan="6" class="empty-row">Upload dispensing records and run checks</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>

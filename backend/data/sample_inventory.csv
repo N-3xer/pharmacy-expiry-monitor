@@ -1,0 +1,15 @@
+drug_name,batch_number,expiry_date,quantity,unit_cost_ksh,category,supplier
+Paracetamol 500mg,BN63459,2028-01-18,417,2.5,Analgesic,KEMSA
+Amoxicillin 250mg,BN63593,2028-01-23,376,8.0,Antibiotic,Beta Healthcare
+Amoxicillin 250mg,BN11092,2026-05-29,442,8.0,Antibiotic,KEMSA
+Metformin 500mg,BN74518,2026-01-20,285,12.0,Antidiabetic,KEMSA
+Ors Sachets,BN55239,2026-06-15,447,15.0,Rehydration,KEMSA
+Cotrimoxazole 480mg,BN57305,2027-04-26,472,5.5,Antibiotic,Beta Healthcare
+Cotrimoxazole 480mg,BN26215,2026-11-02,493,5.5,Antibiotic,KEMSA
+Salbutamol Inhaler,BN74886,2026-04-10,425,350.0,Respiratory,Cosmos
+Folic Acid 5mg,BN16423,2026-04-27,20,1.5,Supplement,Cosmos
+Omeprazole 20mg,BN59244,2026-11-16,257,18.0,GI,KEMSA
+Diclofenac 50mg,BN61779,2026-02-14,389,6.0,Analgesic,Cosmos
+Diclofenac 50mg,BN83401,2026-04-24,239,6.0,Analgesic,Cosmos
+Chloroquine 250mg,BN56210,2026-05-21,93,9.0,Antimalarial,Beta Healthcare
+Chloroquine 250mg,BN87379,2028-03-10,213,9.0,Antimalarial,Beta Healthcare

@@ -1,0 +1,9 @@
+fastapi==0.111.0
+uvicorn==0.29.0
+prophet==1.1.5
+pandas==2.2.2
+pydantic==2.7.1
+python-dotenv==1.0.1
+requests==2.31.0
+# Email
+secure-smtplib==0.1.1
